@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+    </script>
+    <script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+    </script>
+    <script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const rootHandle = document.getElementById('root');
+        // const message = props => <div>{props.msg}</div> // function can also be passed as an argument to the element to render different values onto the browser.
+
+        // const element = (
+        //     <div className = 'container'>
+        //     {message({msg: 'hello world'})}
+        //     {message({msg: 'goodbye world'})}
+        //     </div>
+        // )
+        //  ReactDOM.render(element,rootHandle);
+        // line no. 37 jsx..can also take fucntion and not only a string as an argument..here we are passing a function 'message' which renders a div element and takes hello world as the prop that is the argument.
+        // line no. 45 jsx...the function is changed to a capital letter for babel to know that we are using the function as a self closing self made tag with prop as hello word instead of it as a string.can also be written as a normal tag instead of delf closing.
+
+        const Message = props => <div>{props.msg}</div> 
+            
+        // const element = (
+        //     <div className = 'container'>
+        //     {React.createElement(message, {msg: 'hello world'})} 
+        //     {React.createElement(message, {msg: 'goodbye world'})}
+        //     </div>
+        // )
+
+        const elements = (
+            <div className = 'container'>
+            <Message msg = 'hello world'/> 
+            <Message msg = 'goodbye world'/>
+           </div>
+        )
+         ReactDOM.render(elements,rootHandle);
+
+    </script>
+</body>
+
+</html>

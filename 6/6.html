@@ -1,0 +1,40 @@
+<!-- conditionally render a react document. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+    </script>
+    <script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+    </script>
+    <script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const rootHandle = document.getElementById('root');
+        function Message ({message}) {
+            return (
+            <div>
+             {message ? <div> {message} </div> : <div> No message </div>} //ternary
+            </div>
+            )
+            // if (!message) {
+            //     return <div> No message </div>
+            // } else {
+            //     return <div> {message} </div>
+            // }
+        }
+        ReactDOM.render(<Message message = 'hello'/>, rootHandle);
+    </script>
+</body>
+
+</html>

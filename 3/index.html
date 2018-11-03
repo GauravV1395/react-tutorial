@@ -1,0 +1,29 @@
+<div id = "root"></div>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+</script>
+<script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+</script>
+<script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+</script>
+    <script type = "text/babel"> // to comply with jsx
+    const rootElement = document.getElementById('root');
+    // const element = document.createElement('div');
+    // element.textContent = 'Hello World';
+    // element.className = 'container';
+    // rootElement.appendChild(element);
+    // const element = React.createElement('div', {className : 'container'}, 'Hello World'); //one way 'div' is the element to be created. className is the prop and 'Hello World' is the children.
+    
+    // JSX
+
+const element = <div class = "container"> Hello world </div> //or
+const content = "Hello World"
+const elements = <div class = "container"> {content} </div> // to evaluate the expression. //can execute any javascript expression within the curly braces. // or
+const myClassName = 'container'
+const elementss = <div ClassName = {myClassName + '__hi-there'}>{content}</div>
+const props = {
+    className : 'container',
+    children : 'Hello Worlds'
+}
+const element1 = <div {...props} children = "Hi Gaurav"/> // can also be create as a self closing tag or a normal tag.
+    ReactDOM.render(element1, rootElement); 
+        </script>

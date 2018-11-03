@@ -1,0 +1,18 @@
+<div id = "root"></div>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+</script>
+<script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+</script>
+<script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+</script>
+    <script type = "text/javascript">
+    const rootElement = document.getElementById('root');
+    // const element = document.createElement('div');
+    // element.textContent = 'Hello World';
+    // element.className = 'container';
+    // rootElement.appendChild(element);
+    //const element = React.createElement('div', {className : 'container'}, 'Hello World'); //one way 'div' is the element to be created. className is the prop and 'Hello World' is the children.
+    //const elements = React.createElement('div', {className : 'container', children : ['Hello World', 'Goodbye World']}); // can specify the output to be printed as children.
+    const elementss = React.createElement('div', {className : 'container'}, 'hello world','goodbye world','good world', 'bad world') // can specify as many arguments as we like for a single api call.
+    ReactDOM.render(elementss, rootElement);
+        </script>

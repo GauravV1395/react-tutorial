@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+    </script>
+    <script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+    </script>
+    <script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const rootHandle = document.getElementById('root');
+        function tick() {
+        const time = new Date().toLocaleTimeString(); // toLocaleTimeString returns the local time in a specified language.
+        const element = (
+            <div> the time is <input value = {time}/> 
+             the time is <input value = {time}/> </div>
+        )
+        ReactDOM.render(element, rootHandle);
+        }
+
+        tick() //re rendering the function tick().
+        setInterval(tick,1000); 
+
+    </script>
+</body>
+
+</html>

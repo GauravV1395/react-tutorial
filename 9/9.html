@@ -1,0 +1,47 @@
+<!-- event handlers -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+    </script>
+    <script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+    </script>
+    <script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <script type="text/babel">
+        const rootHandle = document.getElementById('root');
+
+        const state = {eventCount : 0, userName : ''};
+
+        function App() {
+                return (
+                    <div>
+                        <p>
+                        There have been {state. eventCount} events.
+                        </p>
+                        <p>
+                            <button> click </button>
+                        </p>
+                        <p> You typed: {state.userName}</p>
+                        <p>
+                            <input/>
+                        </p>
+                    </div>
+                )
+        }
+        
+    </script>
+</body>
+
+</html>

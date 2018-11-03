@@ -1,0 +1,46 @@
+<!-- style react components with class Name and in line styles. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js">
+    </script>
+    <script src="http://unpkg.com/react@16.0.0/umd/react.production.min.js">
+    </script>
+    <script src="http://unpkg.com/react-dom@16.0.0/umd/react-dom.production.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+    <style>
+        .box--small {
+            width : 60px;
+            height : 60px;
+        }
+    </style>
+    <script type="text/babel">
+        const rootHandle = document.getElementById('root');
+
+       const className = 'box box--small' // in js we use className instead of class.
+       const props = {
+           className,
+           style: {paddingLeft : 20}, // css styles are reffered in an object instead of normal strings and camel case is used.
+       }
+       const element = (
+           <div>
+                <div {...props}> box </div>
+           </div>
+       )
+
+       ReactDOM.render(element, rootHandle);
+    </script>
+</body>
+
+</html>
